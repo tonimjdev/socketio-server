@@ -3,10 +3,9 @@ console.log('Servidor Levantado');
 const path = require('path');
 const express = require('express');
 const app = express();
-const railway = 'https://socketio-server-production-2e07.up.railway.app/';
 
 // settings
-app.set( 'port', process.env.PORT || 3000 || railway );
+app.set( 'port', process.env.PORT );
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
