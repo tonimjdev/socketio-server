@@ -10,21 +10,42 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="main.css" />
     <title>Chat Socket.io</title>
   </head>
   <body>
-    <h1>Chat</h1>
     <div id="chat-container">
-      <div id="chat-window">
-        <div id="output"></div>
-        <div id="actions"></div>
+      <div class="cabeceraChat">
+      <h1 class="fs-4 px-4">Chat</h1>
+      <span id="actions"></span>
       </div>
-      <input type="text" id="username" placeholder="Username" />
-      <input type="text" id="message" placeholder="message" />
-      <button id="send" type="button">Send</button>
+      <div id="chat-window">
+        <div id="output" class="globoUser">
+        </div>
+      </div>
+      <hr>
+      <div class="messageButton row px-5 gap-3">
+      <input type="text" id="message" class="mensaje col-8" placeholder="message" />
+      <button id="send" type="button" class="sendMessage col-3">Send</button>
+    </div>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="chat.js"></script>
   </body>
